@@ -1,0 +1,13 @@
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /courses/{docId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null && request.auth.token.email == 'yassenhassouna39@gmail.com';
+    }
+    match /{document=**} {
+      allow read: if true;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تسجيل الدخول | Flashr</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="badge">Flashr</span>
+        <a href="index.html" class="btn">الرئيسية</a>
+      </div>
+    </div>
+
+    <div class="grid" style="grid-template-columns:1fr 1fr">
+      <div class="card">
+        <h2>تسجيل الدخول</h2>
+        <label class="label">البريد الإلكتروني</label>
+        <input id="loginEmail" class="input" type="email" autocomplete="email" placeholder="email@example.com">
+        <label class="label">كلمة المرور</label>
+        <input id="loginPassword" class="input" type="password" autocomplete="current-password" placeholder="••••••••">
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button id="loginBtn" class="btn primary">دخول</button>
+          <button id="googleBtn" class="btn">Google</button>
+        </div>
+        <p class="small" id="loginMsg"></p>
+      </div>
+
+      <div class="card">
+        <h2>إنشاء حساب</h2>
+        <label class="label">البريد الإلكتروني</label>
+        <input id="signupEmail" class="input" type="email" autocomplete="email" placeholder="email@example.com">
+        <label class="label">كلمة المرور</label>
+        <input id="signupPassword" class="input" type="password" autocomplete="new-password" placeholder="كلمة مرور قوية">
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button id="signupBtn" class="btn success">إنشاء حساب</button>
+        </div>
+        <p class="small" id="signupMsg"></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

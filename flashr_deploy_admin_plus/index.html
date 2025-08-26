@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flashr Courses</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="منصة كورسات مع تسجيل دخول وزر تحميل، مع صلاحيات مسؤول للرفع.">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="badge">Flashr</span>
+        <a href="index.html" class="btn">الرئيسية</a>
+        <a href="login.html" id="loginLink" class="btn">تسجيل الدخول</a>
+        <a href="admin.html" id="adminLink" class="btn hidden">لوحة الأدمن</a>
+      </div>
+      <div id="userBox" class="small"></div>
+    </div>
+
+    <div class="card">
+      <h1>الكورسات المتاحة</h1>
+      <p class="small">اضغط زر التحميل لتنزيل الكورس.</p>
+      <div id="courses" class="grid courses"></div>
+    </div>
+
+    <p class="footer">جاهز للنشر على Firebase Hosting • يحفظ المرفوعات في Firebase Storage ويقرأ المقررات من Firestore.</p>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

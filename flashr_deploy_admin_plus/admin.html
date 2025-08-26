@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة الأدمن | Flashr</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="badge">Flashr</span>
+        <a href="index.html" class="btn">الرئيسية</a>
+        <a href="login.html" class="btn">الحساب</a>
+      </div>
+      <div id="adminUserBox" class="small"></div>
+    </div>
+
+    <div class="card">
+      <h2>رفع كورس جديد</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr">
+        <div>
+          <label class="label">عنوان الكورس</label>
+          <input id="title" class="input" placeholder="مثال: كورس جافاسكربت">
+          <label class="label">وصف مختصر</label>
+          <input id="description" class="input" placeholder="نبذة قصيرة">
+          <label class="label">ملف الكورس (PDF/ZIP/MP4)</label>
+          <input id="file" class="input" type="file">
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <button id="uploadBtn" class="btn primary">رفع وحفظ</button>
+          </div>
+          <p class="small" id="uploadMsg"></p>
+        </div>
+        <div>
+          <p class="small">ملاحظة: سيتم رفع الملف إلى Firebase Storage ثم حفظ بياناته في Firestore ضمن مجموعة <code>courses</code>.</p>
+          <pre class="small" style="white-space:pre-wrap;background:rgba(0,0,0,.25);padding:8px;border-radius:8px">حقول المستند:
+- title
+- description
+- fileUrl
+- createdAt (serverTimestamp)
+- addedBy (email)</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
